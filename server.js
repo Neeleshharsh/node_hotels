@@ -1,10 +1,11 @@
 const express = require('express');
+require('dotenv').config();
+const PORT = process.env.PORT || 3000;
+
 const db = require('./db'); // MongoDB connection
 const app = express();
 const MenuItem = require('./models/menu');
 const bodyParser = require('body-parser');
-
-const PORT = 3000;
 
 // Middleware
 app.use(bodyParser.json());
